@@ -1,6 +1,2 @@
 streamlit
 google-generativeai
-python-dotenv
-pathlib
-textwrap3
-PIL
