@@ -1,15 +1,8 @@
- 
-import os
-import pathlib
-import textwrap
-from PIL import Image
 import google.generativeai as genai
-
-from dotenv import load_dotenv
 
 load_dotenv()
 
-genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+genai.configure(api_key='AIzaSyCywxL3BTdCMWt22qmZIxpOJVECFNbr02s')
 model = genai.GenerativeModel('gemini-1.5-pro-latest')
 
 
