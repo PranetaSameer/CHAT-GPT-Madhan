@@ -4,7 +4,7 @@ from models import get_gemini_response
 
 st.set_page_config(page_title="Gemini Image Demo")
 
-st.header("BOT GPT")
+st.header("Bot GPT")
 input=st.text_input("Input Prompt: ",key="input")
 
 submit=st.button("submit")
