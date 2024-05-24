@@ -25,10 +25,10 @@ if submit:
         response = yt_summerize(input)
     st.subheader("Key Points from the video")
     st.write(response)
-else:    
-    if image != "":
-        response = get_gemini_response_image(input, image)
-    else:
-        response = get_gemini_response(input)
-    st.subheader("Responses:")
-    st.write(response)
+    else:    
+        if image != "":
+            response = get_gemini_response_image(input, image)
+        else:
+            response = get_gemini_response(input)
+        st.subheader("Responses:")
+        st.write(response)
