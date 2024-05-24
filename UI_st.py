@@ -17,6 +17,7 @@ if uploaded_file is not None:
     
 submit=st.button("submit")
 
+response = ''
 ## If ask button is clicked
 yt ="https://www.youtube.com"
 if submit:
@@ -26,8 +27,8 @@ if submit:
     st.write(response)
 else:    
     if image != "":
-        responses = get_gemini_response_image(input, image)
+        response = get_gemini_response_image(input, image)
     else:
-        responses = get_gemini_response(input)
+        response = get_gemini_response(input)
     st.subheader("Responses:")
-    st.write(responses)
+    st.write(response)
