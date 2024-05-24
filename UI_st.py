@@ -1,6 +1,5 @@
 import streamlit as st
 from models import get_gemini_response, get_gemini_response_image, yt_summerize
-from PIL import Image
 
 ##initialize our streamlit app
 
