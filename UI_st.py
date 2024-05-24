@@ -23,8 +23,8 @@ yt ="https://www.youtube.com"
 if submit:
     if yt in input:
         response = yt_summerize(input)
-    st.subheader("Key Points from the video")
-    st.write(response)
+        st.subheader("Key Points from the video")
+        st.write(response)
     else:    
         if image != "":
             response = get_gemini_response_image(input, image)
