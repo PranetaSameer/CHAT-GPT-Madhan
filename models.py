@@ -1,6 +1,7 @@
 import google.generativeai as genai
 from youtube_transcript_api import YouTubeTranscriptApi
 import time
+import requests
 
 genai.configure(api_key="AIzaSyCywxL3BTdCMWt22qmZIxpOJVECFNbr02s")
 model = genai.GenerativeModel('gemini-1.5-pro-latest')
@@ -44,5 +45,18 @@ def video_analisis(video_file_name):
   response = model_video.generate_content([prompt, video_file],
                                     request_options={"timeout": 600})
   return response.text
+
+
+def imagegen(prompt):
+  API_URL = "https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-xl-base-1.0"
+  headers = {"Authorization": "Bearer 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"}
+  
+  payload = {
+    "inputs": prompt,
+  }
+
+  response = requests.post(API_URL, headers=headers, json=payload)
+  return response.content
+  
 
     
