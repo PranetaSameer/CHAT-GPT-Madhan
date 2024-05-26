@@ -16,7 +16,7 @@ with col1:
 with col2:
     st.button("Upload a image and ask about it")
 with col3:
-    st.button("Ask to plan a trip or write a essay on topics")
+    st.button("Image Generation - Create image of dog")
 
 input=st.text_area("Input Prompt: ",key="input")
 uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
