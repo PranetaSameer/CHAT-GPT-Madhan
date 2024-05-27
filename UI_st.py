@@ -12,11 +12,11 @@ st.header("Bot Application")
 
 col1, col2, col3 = st.columns(3)
 with col1:
-    st.button("Youtube video summarization")
+    st.button("Video summarization")
 with col2:
-    st.button("Upload a image and ask about it")
+    st.button("Upload a image to get description")
 with col3:
-    st.button("Image Generation - Create image of dog")
+    st.button("Image Generation - give description")
 
 input=st.text_area("Input Prompt: ",key="input")
 uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
