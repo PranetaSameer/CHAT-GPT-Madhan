@@ -24,22 +24,3 @@ yt ="https://www.youtube.com"
 list = ["create image", "generate image", "create picture", "generate picture"]
 contains_keyword = any(keyword in input.lower() for keyword in list)
 
-if submit:
-    if  contains_keyword:
-        st.write("Generating image...")
-        response = imagegen(input)
-        image = Image.open(io.BytesIO(response))
-        # Display the image in Streamlit
-        st.image(image, caption=input)
-        
-    elif yt in input:
-        response = yt_summerize(input)
-        st.subheader("Key Points from the video")
-        st.write(response)
-    else:    
-        if image != "":
-            response = get_gemini_response_image(input, image)
-        else:
-            response = get_gemini_response(input)
-        st.subheader("Responses:")
-        st.write(response)
